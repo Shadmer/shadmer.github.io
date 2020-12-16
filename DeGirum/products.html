@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DeGirum</title>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="Description" content="DeGirum">
+    <meta name="Keywords" content="DeGirum">
+    <link rel="stylesheet" href="css/slick.css" type="text/css">
+    <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+    <link rel="stylesheet" href="css/SelectBoxIt.css" type="text/css">
+    <link rel="stylesheet" href="css/animsition.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body class="animsition" data-animsition-in-class="fade-in" data-animsition-in-duration="1000" data-animsition-out-class="fade-out" data-animsition-out-duration="800">
+
+<div id="page">
+
+    <header>
+      <div class="logo">
+        <a href="#">
+          <img src="images/logo.svg" alt="">
+          <span>DeGirum</span>
+        </a>
+      </div>
+      <div class="panel">
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="active">Home</a>
+            </li>
+            <li>
+              <a href="#" class="icon-down">Products</a>
+              <ul class="sub">
+                <li>
+                  <a href="#">ORCA</a>
+                </li>
+                <li>
+                  <a href="#">USB Dongle</a>
+                </li>
+                <li>
+                  <a href="#">Development Board</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Resources</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="icon-down">About Us</a>
+              <ul class="sub">
+                <li>
+                  <a href="#">Team</a>
+                </li>
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+                <li>
+                  <a href="#">Contacts</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <a href="#popap-contact" class="message-btn popap-btn icon-message"></a>
+      </div>
+      <div class="mob-nav"><span></span></div>
+    </header>
+
+    <section id="content">
+      <div class="nav-section">
+        <div class="container">
+            <ul>
+              <li>
+                <a href="#section-diagram">PERFORMANCE</a>
+              </li>
+              <li>
+                <a href="#section-supporting">HARDWARE</a>
+              </li>
+              <li>
+                <a href="#section-software-platform">SOFTWARE</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="breadcrumbs clearfix">
+            <li><a href="#">Home</a></li>
+            <li class="separator">|</li>
+            <li><a href="#" class="active">Orca</a></li>
+        </ul>
+        <div class="section-information">
+          <div class="text">
+              <h2>ORCA</h2>
+              <div class="title">Chip to speed up the calculation of neural networks.</div>
+              <p>While MLPerf does not address the cost of solutions submitted, it does provide substantial foundational performance data to enable customers to determine which solutions should be evaluated for their specific applications and requirements.</p>
+          </div>
+          <div class="image">
+              <img src="images/information-image.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="section-diagram" id="section-diagram">
+        <div class="container">
+            <div class="diagram-wrap">
+              <div class="title">ORCA Performance</div>
+              <div class="diagram">
+                  <div id="diagram-classification3"></div>
+              </div>
+              <p><b>Workload:</b> Task: Question Answering, Dataset: SQuAD, Base Model, Layers=12 , Hidden Size=768, Heads=12 , Intermediate Size=3,072, Max Seq Len = 128</p>
+              <div class="text">
+                <div class="col">
+                  <p><b>ORCA Configuration:</b><br/> Hardware: Goya HL-100; CPU Xeon Gold 6152@2.10GHz<br/>
+                     Software: Ubuntu v-16.04.4; SynapseAI v-0.2.0-1173</p>
+                </div>
+                <div class="col">
+                  <p><b>GPU Configuration:</b><br/> Hardware: T4; CPU Xeon Gold 6154@3Ghz/16GB/4 VMs<br/>
+                        Software: Ubuntu-18.04.2.x86_64-gnu; CUDA Ver 10.1, cudnn7.5; TensorRT-5.1.5.0
+                        Precision: 16-bit</p>
+                </div>
+              </div>
+            </div>
+            <div class="diagram-wrap">
+              <div class="title">ORCA Image Classification on RESNET-50</div>
+              <div class="diagram">
+                  <div id="diagram-classification2"></div>
+              </div>
+              <div class="text">
+                <div class="col">
+                  <p><b>ORCA Measurement:</b><br/>
+                        Hardware: Goya HL-100 PCIe Card; CPU XEON E5<br/>
+                        Software: Ubuntu v-16.04; SynapseAI v-0.1.6<br/>
+                        Workload implementation: Precision INT8; Batch size 10;</p>
+                </div>
+                <div class="col">
+                  <p><b>GPU Configuration:</b><br/>
+                    Hardware Configuration: T4; Host Supermicro SYS-4029GP – TRT T4<br/>
+                    Software Configuration:  TensorRT 5.1; Synthetic dataset; Container – 19.03-py3;<br/>
+                    Workload implementation: Precision INT8; Batch size 128;</p>
+                </div>
+              </div>
+            </div>
+            <div class="diagram-wrap">
+              <div class="title">ORCA Image Classification on RESNET-50</div>
+              <div class="diagram">
+                  <div id="diagram-classification"></div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="section-performance-results">
+        <div class="container">
+            <div class="title-section">Mlperf Published Orca Performance Results</div>
+            <div class="info">Habana Reported MLPerf Inference Results for the ORCA Processor in <a href="#">Available</a> Category</div>
+            <div class="column">
+              <div class="col">
+                <p>Some of the key distinctions assessed are:</p>
+                <br/>
+                <div class="tit">Product status</div>
+                <ul>
+                  <li>Available – available now for purchase/deployment</li>
+                  <li>Preview – on a path to availability; not yet there</li>
+                  <li>Research – to test, learn and iterate</li>
+                </ul>
+              </div>
+              <div class="col">
+                <div class="tit">Test specification adherence</div>
+                <ul>
+                  <li>Closed – tested to match the specification, enabling comparison with other closed results</li>
+                  <li>Open – tested to a set of parameters defined by the vendor to present product results in most favorable light</li>
+                  <li>Number of accelerators contained in the tested solution</li>
+                  <li>Type of host processor employed</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tit">Other important factors, such as power, were not included in the measurements.</div>
+            <p>ORCA performance shown here was reported in the available and closed categories.</p>
+            <div class="table-wrap">
+              <div class="title">ORCA MLPrerf Inference 0.5 Results</div>
+              <div class="table">
+                <table>
+                  <tr>
+                    <th>Benchmark</th>
+                    <th>Dataset</th>
+                    <th>Division</th>
+                    <th>Status</th>
+                    <th>Single Stream [msec]</th>
+                    <th>Multi Stream [SPQ]</th>
+                    <th>Server [QPS]</th>
+                    <th>Offline [Throughput]</th>
+                  </tr>
+                  <tr>
+                    <td><b>ResNet-50 v1.5</b></td>
+                    <td>ImageNet</td>
+                    <td>Closed</td>
+                    <td>Available</td>
+                    <td>0.24</td>
+                    <td>700</td>
+                    <td>13090*</td>
+                    <td>14451</td>
+                  </tr>
+                  <tr>
+                    <td><b>SSD-Large</b></td>
+                    <td>COCO-1200x1200</td>
+                    <td>Closed</td>
+                    <td>Available</td>
+                    <td>3.85</td>
+                    <td>18</td>
+                    <td>296.7</td>
+                    <td>326.3</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="info">
+                SPQ = Samples per Query @ 99% tail latency<br/>
+                QPS = Queries per Second @ 99% tail latency<br/>
+                (*) ResNet-50 v1.5 Server scenario result not veryfied by MLPerf
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="section-supporting" id="section-supporting">
+        <div class="container">
+            <div class="title">General purpose AI Processor (AIP) – supporting any topology</div>
+            <div class="supporting">
+              <div class="item">
+                <div class="icon">
+                  <img src="images/supporting-icon_1.svg" alt="">
+                </div>
+                <div class="tit">Image Recognition</div>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <img src="images/supporting-icon_2.svg" alt="">
+                </div>
+                <div class="tit">Sentiment Analysis</div>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <img src="images/supporting-icon_3.svg" alt="">
+                </div>
+                <div class="tit">Neural Machine Translation</div>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <img src="images/supporting-icon_4.svg" alt="">
+                </div>
+                <div class="tit">Recommendation System</div>
+              </div>
+            </div>
+            <div class="head">ORCA Hardware</div>
+        </div>
+      </div>
+      <div class="section-technology">
+        <div class="section">
+            <div class="container">
+                <div class="image">
+                  <img src="images/hardware-image_1.png" alt="">
+                </div>
+                <div class="text">
+                  <ul>
+                    <li>PCIe: Gen4 x 16 lanes</li>
+                    <li>Form Factor: Dual-slot</li>
+                    <li>Memory: 4/8/16GB with ECC</li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="image">
+                  <img src="images/hardware-image_2.png" alt="">
+                </div>
+                <div class="text">
+                  <div class="tit">8-card server:<br/> Typical deployment</div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="image wow fadeInUp" data-wow-delay="0.5s">
+                  <img src="images/technology-image_4.png" alt="">
+                </div>
+                <div class="text wow fadeInUp">
+                  <div class="title">Efficiency and Flexibility</div>
+                  <p>Gas turbine design has advanced enormously in the last 20 years and progress continues. In the past higher efficiency was the primary aim of gas turbine development. Around 1990, typical combined-cycle efficiency was 50 per cent. By 2010 the best installations were above 59 per cent.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="image wow fadeInUp" data-wow-delay="0.5s">
+                  <img src="images/technology-image_5.png" alt="">
+                </div>
+                <div class="text wow fadeInUp">
+                  <div class="title">Scalable</div>
+                  <p>Scalability is the property of a system to handle a growing amount of work by adding resources to the system. In an economic context, a scalable business model implies that a company can increase sales given increased resources. </p>
+                  <p>For example, a package delivery system is scalable because more packages can be delivered by adding more delivery vehicles. </p>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="section-software-platform" id="section-software-platform">
+        <div class="container">
+            <div class="title-section">ORCA’s Software Platform</div>
+            <div class="software-platform-wrap">
+              <div class="text">
+                <div class="tit">Deep Learning Frameworks & Compillers</div>
+                <div class="circle">
+                  <img src="images/platform-image_1.png" alt="">
+                  <div class="arrow">
+                    <img src="images/right-icon_1.svg" alt="">
+                  </div>
+                </div>
+                <div class="circle">
+                  <img src="images/platform-image_2.png" alt="">
+                  <div class="arrow">
+                    <img src="images/right-icon_1.svg" alt="">
+                  </div>
+                </div>
+                <div class="tit">Deep Learning Models Exchange Format</div>
+              </div>
+              <div class="software-platform">
+                  <div class="item">
+                    <div class="title">Synaps API</div>
+                  </div>
+                  <div class="item">
+                    <div class="title">Synaps AI</div>
+                    <div class="column">
+                      <div class="col">
+                        <div class="tit">Habana Labs Library</div>
+                        <div class="tit">User’s Library</div>
+                      </div>
+                      <div class="col">
+                        <div class="arrow">
+                          <img src="images/platform-arrow_1.svg" alt="">
+                        </div>
+                        <div class="arrow">
+                          <img src="images/platform-arrow_2.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="circle">
+                          Habana<br/>
+                          Graph<br/>
+                          Compiler
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="title">Linux Kernel Driver API</div>
+                  </div>
+                  <div class="item">
+                    <div class="title">Linux PCIe Driver</div>
+                  </div>
+              </div>
+              <div class="image">
+                <div class="arrow">
+                  <img src="images/right-icon_3.svg" alt="">
+                </div>
+                <img src="images/platform-image_3.png" alt="">
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="section-development">
+        <div class="container">
+            <div class="title-section">SynapseAI and Habana development tools<br/> speed and ease developmen</div>
+            <div class="development-image">
+              <img src="images/orka-image.png" alt="">
+            </div>
+        </div>
+      </div>
+
+    </section>
+    <footer>
+      <div class="container">
+          <div class="col-logo">
+            <div class="logo">
+              <a href="#">
+                <img src="images/logo.svg" alt="">
+                <span>DeGirum</span>
+              </a>
+            </div>
+            <div class="copyright">Copyright © 2019 DeGirum</div>
+            <ul class="list-policy">
+              <li>
+                <a href="#">Legal Information</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Cookie policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+              <div class="col">
+                <ul class="nav">
+                  <li>
+                    <a href="#" class="tit">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tit">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tit">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li>
+                    <a href="#" class="tit">Products</a>
+                  </li>
+                  <li>
+                    <a href="#">ORCA</a>
+                  </li>
+                  <li>
+                    <a href="#">USB Dongle</a>
+                  </li>
+                  <li>
+                    <a href="#">Development Board</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li>
+                    <a href="#" class="tit">Resources</a>
+                  </li>
+                  <li>
+                    <a href="#">Documentation</a>
+                  </li>
+                  <li>
+                    <a href="#">Tools</a>
+                  </li>
+                  <li>
+                    <a href="#">SDK</a>
+                  </li>
+                  <li>
+                    <a href="#">Examples</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li>
+                    <a href="#" class="tit">About Us</a>
+                  </li>
+                  <li>
+                    <a href="#">Team</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </div>
+      <div id="up" class="icon-next"></div>
+    </footer>
+</div>
+<div class="popap-shadow"></div>
+<div class="popap-wrap" id="popap-contact">
+  <div class="close icon-close"></div>
+  <div class="title">Contact Us</div>
+  <form>
+    <div class="line">
+      <span class="placeholder">Name*</span>
+      <input type="text">
+    </div>
+    <div class="line">
+      <span class="placeholder">E-mail*</span>
+      <input type="text">
+    </div>
+    <div class="line">
+      <span class="placeholder">Phone</span>
+      <input type="text" class="tel-mask">
+    </div>
+    <div class="line">
+      <span class="placeholder">Message</span>
+      <textarea></textarea>
+    </div>
+    <div class="line">
+      <button type="submit">Send</button>
+    </div>
+  </form>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/SelectBoxIt.js"></script>
+<script src="js/jquery.maskedinput.js"></script>
+<script src="js/animsition.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/canvasjs.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    new WOW().init();
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+.vacancy {
+    position: relative;
+    padding: 30px;
+    border-top: 1px solid rgba(44,44,46, .15);
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 9px;
+        top: 45px;
+        right: 20px;
+        background-image: url('../images/icon/arrow.svg');
+        background-repeat: no-repeat;
+        transition: transform .5s;
+    }
+
+    &:last-child {
+        border-bottom: 1px solid rgba(44,44,46, .15);
+    }
+
+    &--active {
+        &::after {
+            transform: rotate(180deg);
+            transition: transform .5s;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        cursor: pointer;
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &__text {
+        margin-top: 40px;
+
+        h4 {
+            font-size: 24px;
+            line-height: 32px;
+            color: #7E8689;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 28px;
+            color: #22222E;
+            opacity: 0.9;
+        }
+
+        li {
+            margin-top: 5px;
+            font-size: 16px;
+            line-height: 28px;
+            color: #22222E;
+            opacity: 0.9;
+        }
+    }
+
+    &__btn-block {
+        margin-top: 40px;
+
+        a {
+            margin-right: 20px;
+        }
+    }
+}

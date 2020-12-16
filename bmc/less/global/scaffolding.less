@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+
+body {
+  min-width: 320px;
+  padding-bottom: 210px;
+  background-color: @body-bg;
+  .t-base();
+}
+
+a {
+  //color: @link-color;
+  //text-decoration: none;
+
+  &:hover,
+  &:focus {
+    //color: @link-color--hover;
+    //text-decoration: @link-hover-decoration;
+  }
+}
+
+b {
+  font-weight: 700;
+}
+
+
+figure {
+  margin: 0;
+}
+
+
+[role="button"] {
+  cursor: pointer;
+}
+
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+

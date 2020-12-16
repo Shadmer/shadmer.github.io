@@ -1,0 +1,38 @@
+.basket {
+    display: flex;
+    align-items: center;
+
+    img {
+        min-width: 40px;
+    }
+
+    &__inner {
+        display: flex;
+        margin-left: 15px;
+        flex-direction: column;
+        font-weight: bold;
+    }
+
+    &__text {
+        font-size: 20px;
+        color: lighten(@color-main, 20);
+    }
+
+    &__price {
+        font-size: 18px;
+    }
+
+    &__mobile {
+        display: flex;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: 3px solid @color-main;
+        margin-left: -10px;
+        font-size: 14px;
+
+        span {
+            margin: auto;
+        }
+    }
+}

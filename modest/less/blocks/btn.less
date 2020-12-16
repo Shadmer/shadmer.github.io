@@ -1,0 +1,37 @@
+.btn {
+    position: relative;
+    display: block;
+    max-width: 320px;
+    padding: 2rem;
+    background-color: @color-third;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    word-wrap: break-word;
+    border-radius: 5px;
+    transition: .3s;
+
+    &:hover {
+        opacity: .8;
+        transition: .3s;
+    }
+
+    &--alt {
+        background-color: transparent;
+        color: @color-second;
+        border: 3px solid @color-second;
+
+        &:hover {
+            opacity: .8;
+            color: @color-main;
+            border: 3px solid @color-main;
+            transition: .3s;
+        }
+    }
+}

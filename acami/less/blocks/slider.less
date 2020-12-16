@@ -1,0 +1,39 @@
+.slider {
+    position: relative;
+    padding-top: 40px;
+
+    &__title {
+        h2 {
+            color: @color-main;
+        }
+    }
+
+    .owl-dots {
+        display: none;
+    }
+
+    .owl-prev, .owl-next {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        margin-top: -50px;
+        outline: none;
+        opacity: .4;
+        transition: opacity .3s;
+
+        &:hover, &:focus {
+            opacity: 1;
+            transition: opacity .3s;
+        }
+
+        span {
+            font-size: 100px;
+            color: @color-main;
+        }
+    }
+
+    .owl-next {
+        left: auto;
+        right: 10px;
+    }
+}

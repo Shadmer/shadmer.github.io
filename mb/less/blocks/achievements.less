@@ -1,0 +1,275 @@
+.achievements {
+
+    &__container {
+        .md-block({
+            .wrapper();
+        });
+    }
+
+    &__row {
+        .row-flex();
+        align-items: center;
+    }
+
+    &__img {
+        position: relative;
+        .col();
+        .size(5);
+        .offset-right(1);
+        .size-md(12);
+        .offset-right-md(0);
+        z-index: 11;
+
+
+        &--second {
+            .size(6);
+            .offset-right(0);
+            margin-left: auto;
+        }
+    }
+
+    &__text {
+        position: relative;
+        .col();
+        .size(4);
+        .offset-left(1);
+        .size-md(12);
+        .offset-left-md(0);
+        padding-bottom: 50px;
+        z-index: 11;
+
+        h2 {
+            margin: 0;
+            color: @color-main;
+            font-size: 3em;
+        }
+
+        p {
+            margin: 0;
+            margin-top: 5px;
+        }
+
+        &--second {
+            .offset-left(0);
+            .offset-right(1);
+            .offset-right-md(0);
+
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        top: 60px;
+        right: -80px;
+
+        &--second {
+            right: auto;
+            left: -80px;
+        }
+
+        .md-block({
+            display: none;
+        });
+    }
+
+    &__prev {
+        position: absolute;
+        bottom: 0;
+        right: 410px;
+        font-size: 32px;
+        color: #fff;
+        opacity: .7;
+        cursor: pointer;
+        transition: opacity .4s;
+        z-index: 999;
+
+
+        .md-block({
+            left: 25px;
+            right: auto;
+        });
+
+
+        img {
+            transform: rotate(180deg);
+        }
+
+        &:hover {
+            opacity: 1;
+            transition: opacity .4s;
+        }
+    }
+
+    &__next {
+        position: absolute;
+        bottom: 0;
+        right: 350px;
+        font-size: 32px;
+        color: #fff;
+        opacity: .7;
+        cursor: pointer;
+        transition: opacity .4s;
+        z-index: 999;
+
+
+        .md-block({
+            left: 85px;
+            right: auto;
+        });
+
+
+        &:hover {
+            opacity: 1;
+            transition: opacity .4s;
+        }
+    }
+
+    .swiper-pagination-first {
+        position: absolute;
+        bottom: 0;
+        right: 160px;
+        color: #000;
+        z-index: 1;
+
+        .md-block({
+            right: 110px;
+            bottom: 3px;
+        });
+    }
+
+    .swiper-pagination-second {
+        position: absolute;
+        bottom: 0;
+        right: 75px;
+        color: #000;
+        z-index: 1;
+
+        .md-block({
+            right: 25px;
+            bottom: 3px;
+        });
+    }
+
+    .swiper-pagination-progressbar {
+        position: absolute;
+        right: 100px !important;
+        left: auto !important;
+        top: auto !important;
+        bottom: 10px !important;
+        width: 50px;
+
+        .md-block({
+            //bottom: 100px !important;
+            right: 50px !important;
+        });
+
+        //&::before {
+        //    content: '01';
+        //    position: absolute;
+        //    bottom: -7px;
+        //    left: -25px;
+        //    color: #000;
+        //}
+        //
+        //&::after {
+        //    content: '04';
+        //    position: absolute;
+        //    bottom: -7px;
+        //    right: -25px;
+        //    color: #000;
+        //}
+    }
+
+    .swiper-pagination-progressbar-fill {
+        background-color: #000;
+    }
+
+    &--second {
+
+        .md-block({
+            padding-bottom: 150px;
+        });
+
+        .swiper-pagination-first {
+            bottom: 0;
+            left: 0;
+            right: auto;
+            color: #fff;
+
+            .md-block({
+                left: 25px;
+                right: auto;
+                bottom: 92px;
+            });
+        }
+
+        .swiper-pagination-second {
+            bottom: 0;
+            left: 90px;
+            right: auto;
+            color: #fff;
+
+            .md-block({
+                left: 110px;
+                right:auto;
+                bottom: 92px;
+            });
+        }
+
+        .achievements__prev {
+            left: 300px;
+            right: auto;
+
+            .md-block({
+                left: 25px;
+                right: auto;
+            });
+
+        }
+
+        .achievements__next {
+            left: 385px;
+            right: auto;
+
+
+            .md-block({
+                left: 85px;
+                right: auto;
+            });
+
+        }
+
+        .swiper-pagination-progressbar {
+            left: 30px !important;
+            right: auto !important;
+
+            .md-block({
+                bottom: 100px !important;
+                left: 50px !important;
+            });
+
+            &::before {
+                color: #fff;
+            }
+
+            &::after {
+                color: #fff;
+            }
+        }
+
+        .swiper-pagination-progressbar-fill {
+            background-color: #fff;
+        }
+    }
+}
+
+.achievements.swiper-container {
+    margin-left: -10px;
+    margin-right: 10px;
+    z-index: 11;
+}
+
+.achievements--second.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+}

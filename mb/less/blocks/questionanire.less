@@ -1,0 +1,113 @@
+.questionanire {
+    position: relative;
+    padding: 20px 0;
+    z-index: 11;
+
+    &__container {
+        .wrapper();
+    }
+
+    &__inner {
+        .row-flex();
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #dadada;
+
+        &:last-child {
+            border-bottom: 1px solid #dadada;
+        }
+
+        &--content {
+            cursor: pointer;
+            opacity: .8;
+            transition: all .4s;
+
+            &:hover {
+                opacity: 1;
+                background-color: @gray-light;
+                transition: all .4s;
+            }
+        }
+    }
+
+    &__item {
+        .col();
+        .size(3);
+        .size-sm(6);
+        padding: 20px 0;
+
+        &--title {
+            .size(6);
+            .size-sm(12);
+            display: flex;
+            font-weight: bold;
+
+            h3 {
+                margin: 0;
+            }
+
+            img {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__calculate {
+        text-align: center;
+        
+        a {
+            position: relative;
+
+            &::after {
+                content: '→';
+                position: absolute;
+                margin-left: 10px;
+                color: @color-accent;
+            }
+        }
+    }
+
+    &__download {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        span {
+            margin-top: 5px;
+            opacity: .8;
+        }
+    }
+
+    &__online {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            margin-right: 10px;
+        }
+    }
+
+    &__google {
+        display: flex;
+        width: 80px;
+        height: 40px;
+        border: 1px solid @gray;
+        border-radius: 20px;
+
+        img {
+            margin: auto;
+        }
+    }
+
+    a {
+        border-color: #000;
+    }
+
+
+}

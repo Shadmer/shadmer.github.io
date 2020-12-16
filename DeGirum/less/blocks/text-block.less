@@ -1,0 +1,46 @@
+.text-block {
+  padding-top: 40px;
+  .md(padding-top, 10px);
+
+
+
+  h1 {
+    //font-family: @font-family-second;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 58px;
+    line-height: 64px;
+    color: @color-main;
+  }
+
+  h2 {
+    //font-family: @font-family-second;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 56px;
+    color: @gray-dark;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  &--short {
+    //.shift-right(.7);
+    //.shift-left(.7);
+    //.shift-lg-left(0);
+    //.shift-lg-right(0);
+  }
+
+  &--accent {
+    h1::after {
+      content: '';
+      display: block;
+      width: 70px;
+      margin-top: 25px;
+      border: 2px solid #C79C68;
+    }
+  }
+
+}

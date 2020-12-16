@@ -1,0 +1,28 @@
+.advantage {
+    padding: 50px;
+    background-color: @gray-light;
+
+    &__row {
+        .row-flex();
+    }
+
+    &__item {
+        .col();
+        .size(6);
+        .size-lg(12);
+        margin-top: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h4 {
+            margin: 0;
+        }
+
+        span {
+            margin-top: 10px;
+            padding-right: 60px;
+        }
+    }
+}

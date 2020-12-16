@@ -1,0 +1,136 @@
+.page-footer {
+    padding-top: 70px;
+    color: #fff;
+
+    &__row {
+        .row-flex();
+    }
+
+    &__logo {
+        .col();
+        .size(2);
+        .size-lg(12);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__list {
+        .col();
+        .size(3.5);
+        .size-lg(8);
+        padding: 0 15px;
+
+        //.lg(display, none);
+        .lg-block({
+            margin: 0 auto;
+
+            h2 {
+                margin-top: 25px;
+                margin-bottom: 5px;
+            }
+        });
+
+        .xs-block({
+            padding: 0;
+            font-size: 14px;
+        });
+
+
+        h2 {
+            margin-top: 0;
+            color: lighten(@color-main, 25);
+        }
+
+        ul {
+            column-count: 2;
+        }
+
+        a {
+            color: inherit;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__contacts {
+         .col();
+        .size(3);
+        .size-lg(12);
+        text-align: center;
+
+        h2 {
+            margin-top: 0;
+            color: lighten(@color-main, 25);
+        }
+
+        a {
+            color: inherit;
+            font-size: 24px;
+        }
+
+        .lg-block({
+            margin-top: 25px;
+        });
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, lighten(@color-main, 25) 0%, lighten(@color-main, 25) 25%, @color-secondary 75%, @color-secondary 100%);
+            transition: background-color .3s;
+
+            &:hover {
+                background: linear-gradient(45deg, @color-secondary 0%, @color-secondary 25%, lighten(@color-main, 25) 75%, lighten(@color-main, 25) 100%);
+                transition: background-color .3s;
+            }
+        }
+    }
+
+    &__top {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background-color: @color-main;
+        background-image: url('../img/background/cloud.svg');
+        background-position: bottom;
+        background-repeat: repeat-x;
+
+    }
+
+    &__bottom {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background-color: #fff;
+
+
+        span {
+            color: #464646;
+            font-size: 18px;
+
+            .md-block({
+                display: block;
+                margin-bottom: 20px;
+            });
+
+
+
+        }
+
+        span, a {
+            padding: 0 10px;
+        }
+    }
+}

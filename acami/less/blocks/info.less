@@ -1,0 +1,98 @@
+.info {
+    .row-flex();
+    padding-top: 30px;
+    align-items: center;
+
+    a {
+        font-size: 25px;
+    }
+
+    &__item {
+        .col();
+        margin-top: 10px;
+    }
+
+    &__title {
+        .size(12);
+        font-size: 25px;
+        color: @color-main;
+    }
+
+    &__price {
+        font-size: 50px;
+    }
+
+    &__btn {
+        width: 100%;
+
+        .xs-block({
+            button, a {
+                min-width: 100%;
+            }
+        })
+    }
+
+    &__desk {
+        position: relative;
+        padding-left: 50px;
+        .size(12);
+        
+        a {
+            font-size: 17px;
+            color: @color-main;
+            text-decoration: underline;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 35px;
+            height: 26px;
+            margin-top: -13px;
+            background-image: url('../img/tokens/payment.png');
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__phone {
+        button, a {
+            padding-left: 50px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                margin-top: -12px;
+                width: 17px;
+                height: 24px;
+                background-image: url('../img/tokens/phone.png');
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &__wa {
+        button, a {
+            padding-left: 50px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                margin-top: -15px;
+                width: 29px;
+                height: 29px;
+                background-image: url('../img/tokens/wa.png');
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+
+
+
+}

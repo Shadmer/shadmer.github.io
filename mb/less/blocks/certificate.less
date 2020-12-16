@@ -1,0 +1,64 @@
+.certificate {
+    position: relative;
+    z-index: 11;
+    border-top: 1px solid #dadada;
+
+
+    &__row {
+        .row-flex();
+    }
+
+    &__desc {
+        .col();
+        .size(6);
+        .size-md(12);
+        padding: 20px 0;
+        padding-right: 80px;
+
+        .md-block({
+            padding-right: 0;
+        });
+    }
+
+    &__brand {
+        .col();
+        .size(3);
+        .size-md(6);
+        .size-sm(12);
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    &__sign {
+        .col();
+        .size(3);
+        .size-md(6);
+        .size-sm(12);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+
+        h3 {
+            margin: 0;
+        }
+
+        .md-block({
+            align-items: center;
+        });
+
+    }
+
+    &__img {
+        .col();
+        .size(3);
+        .size-md(6);
+        .size-sm(12);
+        padding: 20px 0;
+        text-align: center;
+
+        img {
+            cursor: zoom-in;
+        }
+    }
+}

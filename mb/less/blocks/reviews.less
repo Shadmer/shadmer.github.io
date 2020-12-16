@@ -1,0 +1,133 @@
+.reviews {
+    position: relative;
+    //z-index: 11;
+
+    .row-flex();
+    align-items: flex-start;
+
+    &__content {
+        .col();
+        .size(8);
+        .size-md(12);
+        .offset-right(1);
+        .offset-right-md(0);
+
+        .md-block({
+            order: 2;
+        })
+    }
+
+    &__menu {
+        position: relative;
+        .size(3);
+        .size-md(12);
+        max-height: 310px;
+        padding: 30px;
+        padding-right: 90px;
+        background-color: @color-accent;
+
+        .md-block({
+            max-height: 200px;
+            order: 1;
+            margin-bottom: 20px;
+        })
+    }
+
+    &__menu-item {
+        padding-left: 30px;
+        color: #fff;
+        font-size: 25px;
+        opacity: 0.7;
+        transition: opacity .3s;
+        cursor: pointer;
+    }
+
+    &__menu-item.swiper-slide-thumb-active {
+        opacity: 1;
+        transition: opacity .3s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 18px;
+            height: 18px;
+            background-image: url('../img/icons/arrow-right.svg');
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 100%;
+        background-color: #fff;
+    }
+
+    &__desc {
+       flex-basis: 720px;
+    }
+
+    &__img {
+        .md-block({
+            margin: 0 auto;
+            margin-top: 20px;
+        })
+    }
+
+    &__text {
+
+    }
+
+    &__sign {
+        display: flex;
+        margin-top: 40px;
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            margin: 0;
+        }
+
+        span {
+            color: @color-main;
+            font-style: italic;
+        }
+    }
+
+    &__logo {
+        margin-left: 20px;
+    }
+
+    &__next {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        font-size: 32px;
+        color: #fff;
+        transition: opacity .4s;
+    }
+
+    &__prev {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 32px;
+        color: #fff;
+        transition: opacity .4s;
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.5;
+    }
+
+}
+
+.reviews__menu.swiper-container {
+    z-index: 11;
+}

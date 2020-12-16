@@ -1,0 +1,62 @@
+.brands {
+    position: relative;
+    z-index: 11;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -20px;
+
+    &__item {
+        .col();
+        .size(2.4);
+        margin-top: 20px;
+        background-color: #fff;
+        color: #000;
+
+        .lg-block({
+            .size(12);
+        });
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin-top: -75px;
+    }
+
+    .owl-prev, .owl-next {
+        position: absolute;
+        left: 10px;
+        outline: none;
+        opacity: .4;
+        transition: opacity .3s;
+        margin-top: -10px !important;
+
+        &:hover, &:focus {
+            opacity: 1;
+            transition: opacity .3s;
+            background: none !important;
+        }
+
+        span {
+            font-size: 100px;
+            color: @color-main;
+        }
+    }
+
+    .owl-next {
+        left: auto;
+        right: 10px;
+    }
+
+    .owl-dots {
+        margin-top: 20px;
+    }
+}

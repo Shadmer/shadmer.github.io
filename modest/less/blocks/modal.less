@@ -1,0 +1,93 @@
+.modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &--active {
+        display: flex;
+    }
+
+    &__content {
+        position: relative;
+        max-width: 980px;
+        padding: 90px 190px 40px;
+        text-align: center;
+        background-color: #fff;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        overflow-y: auto;
+        z-index: 1;
+
+        &--win {
+            background-image: url('./../img/background/stars-win.png');
+        }
+
+        &--lose {
+            background-image: url('./../img/background/stars-lose.png');
+        }
+
+        h2, h3 {
+            margin: 0;
+            font-family: @ff-second;
+            line-height: 1;
+        }
+
+        h2 {
+            font-size: 7rem;
+            color: @color-second;
+        }
+
+        h3 {
+            font-size: 3.8rem;
+            color: @color-main;
+        }
+
+        p {
+            font-size: 2.5rem;
+            color: #888888;
+        }
+
+        button {
+            margin: 0 auto;
+        }
+
+        .md-block({
+            padding: 50px 20px;
+            h2 {
+                font-size: 3.5rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        });
+    }
+
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .4);
+        cursor: pointer;
+    }
+}

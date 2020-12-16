@@ -1,0 +1,128 @@
+.reviews {
+    padding-top: 60px;
+
+    &__row {
+        .row-flex();
+    }
+
+    &__title {
+        .col();
+        .size(6);
+        .size-lg(12);
+        margin-top: 20px;
+
+        h2 {
+            margin: 0;
+            color: @color-main;
+
+            span {
+                color: @gray-dark;
+                font-size: 17px;
+                font-weight: normal;
+            }
+        }
+    }
+
+    &__rating-block {
+        .col();
+        .size(6);
+        .size-lg(12);
+        margin-top: 20px;
+    }
+
+    &__rating {
+        width: 100px;
+        margin-top: 10px;
+
+        span {
+            width: 100%;
+            height: 19px;
+            display: block;
+            background-image: url('../img/tokens/rating.png');
+        }
+    }
+
+    &__img {
+        .col();
+        .size(6);
+        .size-lg(12);
+        margin-top: 20px;
+    }
+
+    &__box {
+        .col();
+        .size(6);
+        .size-lg(12);
+        margin-top: 20px;
+    }
+
+    &__slider {
+        position: relative;
+    }
+
+    &__width {
+        .owl-stage {
+            width: 100% !important;
+        }
+
+        .owl-item {
+            width: 100% !important;
+
+        }
+    }
+
+    &__review {
+        position: relative;
+        margin-bottom: 70px;
+        padding: 20px 30px;
+        border: 8px solid @color-main;
+        border-radius: 30px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 30px;
+            top: 100%;
+            border: 25px solid;
+            border-color: @color-main transparent transparent @color-main;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 38px;
+            top: 100%;
+            border: 15px solid;
+            border-color: #fff transparent transparent #fff;
+        }
+
+        .md-block({
+            //margin-bottom: 50px;
+        });
+
+
+        //background-color: @color-main;
+        //color: #fff;
+        //border-radius: 50px;
+
+        p {
+            margin: 0;
+        }
+
+    }
+
+    &__btn-block {
+        display: flex;
+        padding-top: 30px;
+
+        button, a {
+            &:first-child {
+                margin-right: 10px;
+            }
+        }
+    }
+}

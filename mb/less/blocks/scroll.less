@@ -1,0 +1,75 @@
+.scroll {
+    position: absolute;
+    width: 16px;
+    height: 64px;
+    bottom: 60px;
+    left: 50%;
+    .offset-left(-2.77);
+    background-color: @gray;
+    mask-image: url("../img/icons/scroll-down.svg");
+    transition: background-color .4s;
+    z-index: 12;
+
+    .lg-block({
+        bottom: auto;
+        left: auto;
+        top: 0px;
+        right: 20px;
+        .offset-left(0);
+    });
+
+    .md-block({
+        transform: scale(.7);
+    });
+
+    &:hover {
+        background-color: @color-accent;
+        transition: background-color .4s;
+    }
+
+    &--info {
+        width: 50px;
+        height: 150px;
+        mask-image: url("../img/icons/scroll-info.svg");
+        z-index: 11;
+        .lg-block({
+            top: 200px;
+        });
+
+        .md-block({
+            top: 0px;
+        });
+    }
+
+    &--second {
+        .offset-left(3);
+    }
+
+    &--right {
+        .offset-left(5.29);
+    }
+
+    &--center {
+        .offset-left(0);
+    }
+
+    &--up {
+        width: 50px;
+        height: 50px;
+        color: #000;
+        font-size: 28px;
+        text-align: center;
+        line-height: 50px;
+        mask-image: none;
+        border-radius: 5px;
+
+        .lg-block({
+            top: auto;
+            bottom: 20px;
+        });
+
+        &:hover {
+            color: #000;
+        }
+    }
+}

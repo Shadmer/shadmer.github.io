@@ -1,0 +1,98 @@
+.options {
+    padding-top: 20px;
+
+    &__title {
+        margin: 0;
+        color: @color-main;
+    }
+
+    &__row {
+        .row-flex();
+    }
+
+    &__item {
+        //.col();
+        //.size(3);
+        //.size-md(12);
+        //display: flex;
+        //flex-wrap: wrap;
+        .row-flex();
+        margin: 20px auto 0;
+        //max-width: 300px;
+        border: 1px solid @gray;
+    }
+
+    &__img {
+        .size(4);
+        //.size-lg(12);
+        //width: 35%;
+        padding-left: 5px;
+        padding-top: 5px;
+
+        img {
+            margin-top: 15px;
+        }
+    }
+
+    &__desc {
+        .size(8);
+        //.size-lg(12);
+        //width: 65%;
+        padding: 5px;
+        text-align: left;
+
+        p {
+            margin: 0;
+        }
+
+        span {
+            margin: 0;
+            font-weight: bold;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+
+        button, a {
+            min-width: 100%;
+            padding-right: 60px;
+            border-radius: 0;
+            transition: all .3s;
+
+            .lg-block({
+                //min-width: 0;
+            });
+
+            &:hover {
+
+                &::after {
+                    opacity: .5;
+                    transition: all .3s;
+                }
+
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50px;
+                height: 100%;
+                background-color: @color-secondary;
+                background-image: url('../img/tokens/truck.png');
+                background-repeat: no-repeat;
+                background-position: center center;
+                transition: all .3s;
+            }
+        }
+    }
+
+    &__more {
+        display: block;
+        margin-top: 20px;
+        text-decoration: underline;
+    }
+
+}

@@ -1,0 +1,30 @@
+.map {
+    position: relative;
+    z-index: 11;
+    &__container {
+        .wrapper();
+    }
+
+    &__row {
+        .row-flex();
+    }
+
+    &__item {
+        .col();
+    }
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+
+        a {
+            margin-right: 10px;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

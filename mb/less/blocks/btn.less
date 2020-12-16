@@ -1,0 +1,64 @@
+ .btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    background-color: @color-accent;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    word-wrap: break-word;
+    border-radius: 10px;
+    transition: all .4s;
+
+    &:hover, &:focus {
+        background-color: @color-main;
+        transition: all .4s;
+    }
+
+     &--second {
+         width: auto;
+         padding: 10px 20px;
+         background-color: @gray-light;
+         color: #000;
+
+         &:hover, &:focus {
+             background-color: @color-accent;
+             color: #fff;
+         }
+     }
+
+     &--transparent {
+         border: 2px solid #fff;
+         background-color: transparent;
+
+         &:hover, &:focus {
+             background-color: @color-accent;
+             border-color: @color-accent;
+             transition: all .4s;
+         }
+     }
+
+     &--accent-transparent {
+         color: @color-accent;
+         border: 2px solid @color-accent;
+
+         &:hover, &:focus {
+             color: #fff;
+         }
+     }
+
+     &--danger {
+         padding: 20px;
+         background-color: @color-danger;
+
+         &:hover, &:focus {
+             background-color: @color-accent;
+         }
+     }
+}

@@ -1,0 +1,157 @@
+.graphs {
+
+    &__container {
+        .wrapper();
+    }
+
+    &__row {
+        .row-flex();
+        margin-top: 20px;
+
+        .md-block({
+            margin-top: 0;
+        });
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: @color-main;
+        font-weight: 800;
+
+        h2 {
+            .t-big();
+            font-weight: 800;
+        }
+
+        span {
+            margin-left: 40px;
+            .t-extra();
+            opacity: .6;
+        }
+    }
+
+    &__percent {
+        display: flex;
+        align-items: center;
+        .col();
+        .size(4);
+        .size-md(12);
+        color: @color-main;
+        text-transform: uppercase;
+
+
+        &:first-child{
+            .size(8);
+            .size-md(12);
+        }
+
+        span {
+            margin-right: 10px;
+            .t-big();
+            font-weight: 300;
+            opacity: .7;
+        }
+
+        p {
+            display: inline-block;
+            .t-small();
+            font-weight: 500;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        .col();
+        .size(5);
+        .size-md(12);
+        .offset-right(1);
+        .offset-right-md(0);
+
+        h3 {
+            margin: auto 0 20px;
+            .t-big();
+            color: @color-main;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        p {
+            .t-small();
+            margin: 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        .col();
+        .size(3);
+        .size-md(6);
+        .md-block({
+            margin-top: 20px;
+        });
+
+        h3 {
+            margin-top: auto;
+            margin-bottom: 10px;
+            color: @color-main !important;
+            text-decoration: none;
+        }
+
+        div {
+            display: flex;
+            background-color: @color-main;
+
+            span {
+                margin-top: auto;
+                padding: 10px;
+                text-transform: uppercase;
+                .t-small();
+                color: #fff;
+            }
+        }
+
+        &--2019 {
+            div {
+                height: 280px;
+            }
+        }
+
+        &--2020 {
+            div {
+                height: 320px;
+            }
+        }
+    }
+
+    &--alt {
+        .graphs__title {
+            color: @color-secondary;
+        }
+
+        .graphs__percent {
+            color: @color-secondary;
+        }
+
+        .graphs__text {
+            h3 {
+                color: @color-secondary;
+            }
+        }
+
+        .graphs__item {
+            color: @color-secondary;
+
+            h3 {
+                color: @color-secondary !important;
+            }
+
+            div {
+                background-color: @color-secondary;
+            }
+        }
+    }
+}

@@ -1,0 +1,672 @@
+@font-face {
+    font-family: 'Kabrio Soft';
+    src: url('KabrioSoft-Light.eot');
+    src: local('Kabrio Soft Light'), local('KabrioSoft-Light'),
+        url('KabrioSoft-Light.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-Light.woff2') format('woff2'),
+        url('KabrioSoft-Light.woff') format('woff'),
+        url('KabrioSoft-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate';
+    src: url('KabrioAlternate-Light.eot');
+    src: local('Kabrio Alternate Light'), local('KabrioAlternate-Light'),
+        url('KabrioAlternate-Light.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-Light.woff2') format('woff2'),
+        url('KabrioAlternate-Light.woff') format('woff'),
+        url('KabrioAlternate-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft';
+    src: url('KabrioSoft-Heavy.eot');
+    src: local('Kabrio Soft Heavy'), local('KabrioSoft-Heavy'),
+        url('KabrioSoft-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-Heavy.woff2') format('woff2'),
+        url('KabrioSoft-Heavy.woff') format('woff'),
+        url('KabrioSoft-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth';
+    src: url('KabrioAbarth-BoldItalic.eot');
+    src: local('Kabrio Abarth Bold Italic'), local('KabrioAbarth-BoldItalic'),
+        url('KabrioAbarth-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-BoldItalic.woff2') format('woff2'),
+        url('KabrioAbarth-BoldItalic.woff') format('woff'),
+        url('KabrioAbarth-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth';
+    src: url('KabrioAbarth-ExtraLightItalic.eot');
+    src: local('KabrioAbarth-ExtraLightItalic'),
+        url('KabrioAbarth-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-ExtraLightItalic.woff2') format('woff2'),
+        url('KabrioAbarth-ExtraLightItalic.woff') format('woff'),
+        url('KabrioAbarth-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth';
+    src: url('KabrioAbarth-LightItalic.eot');
+    src: local('Kabrio Abarth Light Italic'), local('KabrioAbarth-LightItalic'),
+        url('KabrioAbarth-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-LightItalic.woff2') format('woff2'),
+        url('KabrioAbarth-LightItalic.woff') format('woff'),
+        url('KabrioAbarth-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth Book';
+    src: url('KabrioAbarth-BookItalic.eot');
+    src: local('Kabrio Abarth Book Italic'), local('KabrioAbarth-BookItalic'),
+        url('KabrioAbarth-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-BookItalic.woff2') format('woff2'),
+        url('KabrioAbarth-BookItalic.woff') format('woff'),
+        url('KabrioAbarth-BookItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate ExtBd';
+    src: url('KabrioAlternate-ExtBdIta.eot');
+    src: local('Kabrio Alternate ExtBd Ita'), local('KabrioAlternate-ExtBdIta'),
+        url('KabrioAlternate-ExtBdIta.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-ExtBdIta.woff2') format('woff2'),
+        url('KabrioAlternate-ExtBdIta.woff') format('woff'),
+        url('KabrioAlternate-ExtBdIta.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate';
+    src: url('KabrioAlternate-Italic.eot');
+    src: local('Kabrio Alternate Italic'), local('KabrioAlternate-Italic'),
+        url('KabrioAlternate-Italic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-Italic.woff2') format('woff2'),
+        url('KabrioAlternate-Italic.woff') format('woff'),
+        url('KabrioAlternate-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Book';
+    src: url('Kabrio-BookItalic.eot');
+    src: local('Kabrio Book Italic'), local('Kabrio-BookItalic'),
+        url('Kabrio-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-BookItalic.woff2') format('woff2'),
+        url('Kabrio-BookItalic.woff') format('woff'),
+        url('Kabrio-BookItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio';
+    src: url('Kabrio-Bold.eot');
+    src: local('Kabrio-Bold'),
+        url('Kabrio-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-Bold.woff2') format('woff2'),
+        url('Kabrio-Bold.woff') format('woff'),
+        url('Kabrio-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth';
+    src: url('KabrioAbarth-Light.eot');
+    src: local('Kabrio Abarth Light'), local('KabrioAbarth-Light'),
+        url('KabrioAbarth-Light.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-Light.woff2') format('woff2'),
+        url('KabrioAbarth-Light.woff') format('woff'),
+        url('KabrioAbarth-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft ExtLt';
+    src: url('KabrioSoft-ExtraLightItalic.eot');
+    src: local('Kabrio Soft ExtraLight Italic'), local('KabrioSoft-ExtraLightItalic'),
+        url('KabrioSoft-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-ExtraLightItalic.woff2') format('woff2'),
+        url('KabrioSoft-ExtraLightItalic.woff') format('woff'),
+        url('KabrioSoft-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio';
+    src: url('Kabrio-ExtraLight.eot');
+    src: local('Kabrio ExtraLight'), local('Kabrio-ExtraLight'),
+        url('Kabrio-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-ExtraLight.woff2') format('woff2'),
+        url('Kabrio-ExtraLight.woff') format('woff'),
+        url('Kabrio-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio';
+    src: url('Kabrio-HeavyItalic.eot');
+    src: local('Kabrio Heavy Italic'), local('Kabrio-HeavyItalic'),
+        url('Kabrio-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-HeavyItalic.woff2') format('woff2'),
+        url('Kabrio-HeavyItalic.woff') format('woff'),
+        url('Kabrio-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft ExtBd';
+    src: url('KabrioSoft-ExtraBoldItalic.eot');
+    src: local('Kabrio Soft ExtraBold Italic'), local('KabrioSoft-ExtraBoldItalic'),
+        url('KabrioSoft-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-ExtraBoldItalic.woff2') format('woff2'),
+        url('KabrioSoft-ExtraBoldItalic.woff') format('woff'),
+        url('KabrioSoft-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft Book';
+    src: url('KabrioSoft-Book.eot');
+    src: local('Kabrio Soft Book'), local('KabrioSoft-Book'),
+        url('KabrioSoft-Book.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-Book.woff2') format('woff2'),
+        url('KabrioSoft-Book.woff') format('woff'),
+        url('KabrioSoft-Book.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Book';
+    src: url('Kabrio-Book.eot');
+    src: local('Kabrio Book'), local('Kabrio-Book'),
+        url('Kabrio-Book.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-Book.woff2') format('woff2'),
+        url('Kabrio-Book.woff') format('woff'),
+        url('Kabrio-Book.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio';
+    src: url('Kabrio-ExtraLightItalic.eot');
+    src: local('Kabrio-ExtraLightItalic'),
+        url('Kabrio-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-ExtraLightItalic.woff2') format('woff2'),
+        url('Kabrio-ExtraLightItalic.woff') format('woff'),
+        url('Kabrio-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth';
+    src: url('KabrioAbarth-Regular.eot');
+    src: local('Kabrio Abarth Regular'), local('KabrioAbarth-Regular'),
+        url('KabrioAbarth-Regular.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-Regular.woff2') format('woff2'),
+        url('KabrioAbarth-Regular.woff') format('woff'),
+        url('KabrioAbarth-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft';
+    src: url('KabrioSoft-LightItalic.eot');
+    src: local('Kabrio Soft Light Italic'), local('KabrioSoft-LightItalic'),
+        url('KabrioSoft-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-LightItalic.woff2') format('woff2'),
+        url('KabrioSoft-LightItalic.woff') format('woff'),
+        url('KabrioSoft-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio ExtBd';
+    src: url('Kabrio-ExtraBoldItalic.eot');
+    src: local('Kabrio ExtraBold Italic'), local('Kabrio-ExtraBoldItalic'),
+        url('Kabrio-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-ExtraBoldItalic.woff2') format('woff2'),
+        url('Kabrio-ExtraBoldItalic.woff') format('woff'),
+        url('Kabrio-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth ExtBd';
+    src: url('KabrioAbarth-ExtraBoldItalic.eot');
+    src: local('Kabrio Abarth ExtraBold Italic'), local('KabrioAbarth-ExtraBoldItalic'),
+        url('KabrioAbarth-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-ExtraBoldItalic.woff2') format('woff2'),
+        url('KabrioAbarth-ExtraBoldItalic.woff') format('woff'),
+        url('KabrioAbarth-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth Book';
+    src: url('KabrioAbarth-Book.eot');
+    src: local('Kabrio Abarth Book'), local('KabrioAbarth-Book'),
+        url('KabrioAbarth-Book.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-Book.woff2') format('woff2'),
+        url('KabrioAbarth-Book.woff') format('woff'),
+        url('KabrioAbarth-Book.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate';
+    src: url('KabrioAlternate-ExtraLightItali.eot');
+    src: local('KabrioAlternate-ExtraLightItali'),
+        url('KabrioAlternate-ExtraLightItali.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-ExtraLightItali.woff2') format('woff2'),
+        url('KabrioAlternate-ExtraLightItali.woff') format('woff'),
+        url('KabrioAlternate-ExtraLightItali.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft';
+    src: url('KabrioSoft-Regular.eot');
+    src: local('Kabrio Soft Regular'), local('KabrioSoft-Regular'),
+        url('KabrioSoft-Regular.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-Regular.woff2') format('woff2'),
+        url('KabrioSoft-Regular.woff') format('woff'),
+        url('KabrioSoft-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth';
+    src: url('KabrioAbarth-Italic.eot');
+    src: local('Kabrio Abarth Italic'), local('KabrioAbarth-Italic'),
+        url('KabrioAbarth-Italic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-Italic.woff2') format('woff2'),
+        url('KabrioAbarth-Italic.woff') format('woff'),
+        url('KabrioAbarth-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth';
+    src: url('KabrioAbarth-Heavy.eot');
+    src: local('Kabrio Abarth Heavy'), local('KabrioAbarth-Heavy'),
+        url('KabrioAbarth-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-Heavy.woff2') format('woff2'),
+        url('KabrioAbarth-Heavy.woff') format('woff'),
+        url('KabrioAbarth-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate';
+    src: url('KabrioAlternate-Regular.eot');
+    src: local('Kabrio Alternate Regular'), local('KabrioAlternate-Regular'),
+        url('KabrioAlternate-Regular.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-Regular.woff2') format('woff2'),
+        url('KabrioAlternate-Regular.woff') format('woff'),
+        url('KabrioAlternate-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio';
+    src: url('Kabrio-Regular.eot');
+    src: local('Kabrio Regular'), local('Kabrio-Regular'),
+        url('Kabrio-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-Regular.woff2') format('woff2'),
+        url('Kabrio-Regular.woff') format('woff'),
+        url('Kabrio-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft ExtBd';
+    src: url('KabrioSoft-ExtraBold.eot');
+    src: local('Kabrio Soft ExtraBold'), local('KabrioSoft-ExtraBold'),
+        url('KabrioSoft-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-ExtraBold.woff2') format('woff2'),
+        url('KabrioSoft-ExtraBold.woff') format('woff'),
+        url('KabrioSoft-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio';
+    src: url('Kabrio-BoldItalic.eot');
+    src: local('Kabrio-BoldItalic'),
+        url('Kabrio-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-BoldItalic.woff2') format('woff2'),
+        url('Kabrio-BoldItalic.woff') format('woff'),
+        url('Kabrio-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio';
+    src: url('Kabrio-Light.eot');
+    src: local('Kabrio Light'), local('Kabrio-Light'),
+        url('Kabrio-Light.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-Light.woff2') format('woff2'),
+        url('Kabrio-Light.woff') format('woff'),
+        url('Kabrio-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth';
+    src: url('KabrioAbarth-HeavyItalic.eot');
+    src: local('Kabrio Abarth Heavy Italic'), local('KabrioAbarth-HeavyItalic'),
+        url('KabrioAbarth-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-HeavyItalic.woff2') format('woff2'),
+        url('KabrioAbarth-HeavyItalic.woff') format('woff'),
+        url('KabrioAbarth-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft';
+    src: url('KabrioSoft-Italic.eot');
+    src: local('Kabrio Soft Italic'), local('KabrioSoft-Italic'),
+        url('KabrioSoft-Italic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-Italic.woff2') format('woff2'),
+        url('KabrioSoft-Italic.woff') format('woff'),
+        url('KabrioSoft-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate Book';
+    src: url('KabrioAlternate-BookItalic.eot');
+    src: local('Kabrio Alternate Book Italic'), local('KabrioAlternate-BookItalic'),
+        url('KabrioAlternate-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-BookItalic.woff2') format('woff2'),
+        url('KabrioAlternate-BookItalic.woff') format('woff'),
+        url('KabrioAlternate-BookItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio';
+    src: url('Kabrio-Italic.eot');
+    src: local('Kabrio Italic'), local('Kabrio-Italic'),
+        url('Kabrio-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-Italic.woff2') format('woff2'),
+        url('Kabrio-Italic.woff') format('woff'),
+        url('Kabrio-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth';
+    src: url('KabrioAbarth-ExtraLight.eot');
+    src: local('Kabrio Abarth ExtraLight'), local('KabrioAbarth-ExtraLight'),
+        url('KabrioAbarth-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-ExtraLight.woff2') format('woff2'),
+        url('KabrioAbarth-ExtraLight.woff') format('woff'),
+        url('KabrioAbarth-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft';
+    src: url('KabrioSoft-HeavyItalic.eot');
+    src: local('Kabrio Soft Heavy Italic'), local('KabrioSoft-HeavyItalic'),
+        url('KabrioSoft-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-HeavyItalic.woff2') format('woff2'),
+        url('KabrioSoft-HeavyItalic.woff') format('woff'),
+        url('KabrioSoft-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio ExtBd';
+    src: url('Kabrio-ExtraBold.eot');
+    src: local('Kabrio ExtraBold'), local('Kabrio-ExtraBold'),
+        url('Kabrio-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-ExtraBold.woff2') format('woff2'),
+        url('Kabrio-ExtraBold.woff') format('woff'),
+        url('Kabrio-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate';
+    src: url('KabrioAlternate-Heavy.eot');
+    src: local('Kabrio Alternate Heavy'), local('KabrioAlternate-Heavy'),
+        url('KabrioAlternate-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-Heavy.woff2') format('woff2'),
+        url('KabrioAlternate-Heavy.woff') format('woff'),
+        url('KabrioAlternate-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate';
+    src: url('KabrioAlternate-ExtraLight.eot');
+    src: local('Kabrio Alternate ExtraLight'), local('KabrioAlternate-ExtraLight'),
+        url('KabrioAlternate-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-ExtraLight.woff2') format('woff2'),
+        url('KabrioAlternate-ExtraLight.woff') format('woff'),
+        url('KabrioAlternate-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth';
+    src: url('KabrioAbarth-Bold.eot');
+    src: local('KabrioAbarth-Bold'),
+        url('KabrioAbarth-Bold.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-Bold.woff2') format('woff2'),
+        url('KabrioAbarth-Bold.woff') format('woff'),
+        url('KabrioAbarth-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio';
+    src: url('Kabrio-LightItalic.eot');
+    src: local('Kabrio Light Italic'), local('Kabrio-LightItalic'),
+        url('Kabrio-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-LightItalic.woff2') format('woff2'),
+        url('Kabrio-LightItalic.woff') format('woff'),
+        url('Kabrio-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate Book';
+    src: url('KabrioAlternate-Book.eot');
+    src: local('Kabrio Alternate Book'), local('KabrioAlternate-Book'),
+        url('KabrioAlternate-Book.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-Book.woff2') format('woff2'),
+        url('KabrioAlternate-Book.woff') format('woff'),
+        url('KabrioAlternate-Book.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft ExtLt';
+    src: url('KabrioSoft-ExtraLight.eot');
+    src: local('Kabrio Soft ExtraLight'), local('KabrioSoft-ExtraLight'),
+        url('KabrioSoft-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-ExtraLight.woff2') format('woff2'),
+        url('KabrioSoft-ExtraLight.woff') format('woff'),
+        url('KabrioSoft-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate';
+    src: url('KabrioAlternate-Bold.eot');
+    src: local('KabrioAlternate-Bold'),
+        url('KabrioAlternate-Bold.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-Bold.woff2') format('woff2'),
+        url('KabrioAlternate-Bold.woff') format('woff'),
+        url('KabrioAlternate-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft Book';
+    src: url('KabrioSoft-BookItalic.eot');
+    src: local('Kabrio Soft Book Italic'), local('KabrioSoft-BookItalic'),
+        url('KabrioSoft-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-BookItalic.woff2') format('woff2'),
+        url('KabrioSoft-BookItalic.woff') format('woff'),
+        url('KabrioSoft-BookItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate';
+    src: url('KabrioAlternate-HeavyItalic.eot');
+    src: local('Kabrio Alternate Heavy Italic'), local('KabrioAlternate-HeavyItalic'),
+        url('KabrioAlternate-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-HeavyItalic.woff2') format('woff2'),
+        url('KabrioAlternate-HeavyItalic.woff') format('woff'),
+        url('KabrioAlternate-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft';
+    src: url('KabrioSoft-Bold.eot');
+    src: local('Kabrio Soft Bold'), local('KabrioSoft-Bold'),
+        url('KabrioSoft-Bold.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-Bold.woff2') format('woff2'),
+        url('KabrioSoft-Bold.woff') format('woff'),
+        url('KabrioSoft-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate ExtBd';
+    src: url('KabrioAlternate-ExtraBold.eot');
+    src: local('KabrioAlternate-ExtraBold'),
+        url('KabrioAlternate-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-ExtraBold.woff2') format('woff2'),
+        url('KabrioAlternate-ExtraBold.woff') format('woff'),
+        url('KabrioAlternate-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate';
+    src: url('KabrioAlternate-BoldItalic.eot');
+    src: local('Kabrio Alternate Bold Italic'), local('KabrioAlternate-BoldItalic'),
+        url('KabrioAlternate-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-BoldItalic.woff2') format('woff2'),
+        url('KabrioAlternate-BoldItalic.woff') format('woff'),
+        url('KabrioAlternate-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Alternate';
+    src: url('KabrioAlternate-LightItalic.eot');
+    src: local('Kabrio Alternate Light Italic'), local('KabrioAlternate-LightItalic'),
+        url('KabrioAlternate-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAlternate-LightItalic.woff2') format('woff2'),
+        url('KabrioAlternate-LightItalic.woff') format('woff'),
+        url('KabrioAlternate-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio';
+    src: url('Kabrio-Heavy.eot');
+    src: local('Kabrio Heavy'), local('Kabrio-Heavy'),
+        url('Kabrio-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('Kabrio-Heavy.woff2') format('woff2'),
+        url('Kabrio-Heavy.woff') format('woff'),
+        url('Kabrio-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kabrio Soft';
+    src: url('KabrioSoft-BoldItalic.eot');
+    src: local('Kabrio Soft Bold Italic'), local('KabrioSoft-BoldItalic'),
+        url('KabrioSoft-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('KabrioSoft-BoldItalic.woff2') format('woff2'),
+        url('KabrioSoft-BoldItalic.woff') format('woff'),
+        url('KabrioSoft-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kabrio Abarth ExtBd';
+    src: url('KabrioAbarth-ExtraBold.eot');
+    src: local('KabrioAbarth-ExtraBold'),
+        url('KabrioAbarth-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('KabrioAbarth-ExtraBold.woff2') format('woff2'),
+        url('KabrioAbarth-ExtraBold.woff') format('woff'),
+        url('KabrioAbarth-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+

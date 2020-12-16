@@ -1,0 +1,38 @@
+.btn {
+    display: inline-block;
+    width: 168px;
+    height: 56px;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 56px;
+    text-align: center;
+    background: linear-gradient(90deg, #0F4C81 0%, #6D5B97 100%);
+    margin: 35px 4px 4px 4px;
+    outline: 1px solid #F0EDE5;
+    outline-offset: 4px;
+
+    &:hover {
+        color: #DBCBBD;
+
+        &::before {
+            opacity: .3;
+            transition: opacity .4s;
+        }
+    }
+
+    &--second {
+        color: #3B3B47;
+        background: none;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 14px;
+            background-image: url('../images/icon/file.svg');
+            background-repeat: no-repeat;
+            transition: opacity .4s;
+        }
+    }
+}
+

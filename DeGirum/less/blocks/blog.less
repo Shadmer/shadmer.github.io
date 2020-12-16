@@ -1,0 +1,42 @@
+.blog {
+    position: relative;
+
+    &__row {
+        .row-flex();
+    }
+
+    &__main {
+       .col();
+        .size(9);
+        .size-lg(12);
+        .lg(order, 2);
+    }
+
+    &__sidebar {
+        position: sticky;
+        top: 120px;
+        right: 0;
+        .col();
+        .size(3);
+        .size-lg(12);
+        margin-top: 20px;
+        align-self: flex-start;
+        .lg(order, 1);
+        .lg(position, static);
+    }
+
+    &__item {
+        .col();
+        .size(4);
+        .size-md(12);
+        margin-top: 20px;
+
+        &--big {
+            .size(8);
+        }
+
+        &--biggest {
+            .size(12);
+        }
+    }
+}

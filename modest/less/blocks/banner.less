@@ -1,0 +1,58 @@
+.banner {
+    background: linear-gradient(0deg, white 0, white 47px, @color-main 0, @color-main);
+    .md-block({
+        background: @color-main;
+    });
+
+    &__container {
+        .wrapper();
+        min-height: 690px;
+        background-image: url('./../img/images/child.png');
+        background-repeat: no-repeat;
+        background-position: bottom right;
+
+        .md-block({
+            min-height: auto;
+            background: none;
+        });
+    }
+
+    &__row {
+        .row-flex();
+    }
+
+    &__inner {
+        .col();
+        .size(5.5);
+        .size-md(12);
+        padding: 30px 0;
+        text-align: center;
+
+        p {
+            margin-top: 4rem;
+            //font-family: @ff-second;
+            font-size: 3.2rem;
+            font-weight: bold;
+            text-align: right;
+            color: #fff;
+
+            .md-block({
+                text-align: center;
+            });
+
+            img {
+                max-width: 190px;
+                padding: 10px 15px;
+                display: inline-block;
+                background-color: #fff;
+                border-radius: 10px;
+            }
+
+        }
+
+        a {
+            margin: 50px auto 0;
+        }
+    }
+}
+

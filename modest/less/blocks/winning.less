@@ -1,0 +1,72 @@
+.winning {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+
+    &__container {
+        .wrapper();
+    }
+
+    &__row {
+        .row-flex();
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+        text-align: center;
+
+        h2 {
+            margin: 0;
+            font-family: @ff-second;
+            font-size: 6.6rem;
+            color: @color-main;
+        }
+
+        p {
+            margin: 0;
+            font-size: 2rem;
+            color: #888888;
+        }
+    }
+
+    &__carts {
+        .sm-block({
+            display: none;
+        });
+    }
+
+    &__item {
+        .col();
+        .size(2.4);
+        .size-sm(12);
+        margin-top: 2rem;
+        text-align: center;
+
+        img {
+            display: none;
+
+            .sm-block({
+                display: inline-block;
+            });
+        }
+
+        p {
+            //font-family: @ff-second;
+            font-size: 2.1rem;
+            font-weight: bold;
+            color: @color-main;
+            line-height: 1;
+
+            .md-block({
+                font-size: 1.5rem;
+            });
+
+
+            span {
+                display: block;
+                font-size: 5rem;
+            }
+        }
+    }
+
+}
+

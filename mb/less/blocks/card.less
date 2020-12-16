@@ -1,0 +1,122 @@
+.card {
+    &__container {
+        .wrapper();
+    }
+
+    &__row {
+        .row-flex();
+    }
+
+    &__img-block {
+        .col();
+        .size(8);
+        .size-sm(12);
+
+        .sm-block({
+            margin-bottom: 20px;
+        });
+    }
+
+    &__img-menu {
+        .col();
+        .size(2.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__img-btn {
+        margin-top: 10px;
+        background-color: @gray-light;
+        border: 2px solid transparent;
+        transition: border-color .4s;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &--active {
+            border-color: @color-accent;
+            transition: border-color .4s;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            object-fit: cover;
+        }
+    }
+
+    &__img-wrap {
+        position: relative;
+        .col();
+        .size(9.5);
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: @gray-light;
+        opacity: 0;
+        transition: opacity .4s;
+
+
+        &--active {
+            opacity: 1;
+            transition: opacity .4s;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    &__desc {
+        .col();
+        .size(4);
+        .size-sm(12);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 20px;
+
+        .md-block({
+            padding-right: 0;
+        });
+
+        p {
+            margin: 0 0 10px;
+            opacity: .8;
+        }
+
+        a {
+            margin-top: auto;
+            //margin-top: 15px;
+            //margin-bottom: 15px;
+            border-bottom: 1px dashed black;
+            transition: all .4s;
+
+            &:last-child {
+                //margin-bottom: 0;
+                margin-top: 15px;
+            }
+
+            &:hover {
+                border-color: @color-accent;
+                transition: all .4s;
+            }
+        }
+
+        button {
+            //margin-top: auto;
+            margin-top: 20px;
+        }
+    }
+}

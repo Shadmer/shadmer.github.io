@@ -1,0 +1,37 @@
+.lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    //display: none;
+
+    .md-block({
+        display: none;
+    });
+
+
+    &__container {
+        .wrapper();
+        height: 100vh;
+
+    }
+
+    &__row {
+        .row-flex();
+        height: 100vh;
+
+    }
+
+    &__item {
+        .col();
+        .size(3);
+        border-left: 1px solid #8D8D8D;
+        opacity: .3;
+
+        &:last-child {
+            border-right: 1px solid #8D8D8D;
+        }
+    }
+}

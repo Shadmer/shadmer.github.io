@@ -1,0 +1,276 @@
+.section {
+    position: relative;
+    padding: 150px 0;
+    border-top: 1px solid #dadada;
+
+    .md-block({
+        padding: 75px 0;
+    });
+
+    .sm-block({
+        padding: 40px 0;
+    });
+
+    &--nopadding {
+        padding: 0;
+        border-top: 0;
+    }
+
+    &--noborder {
+        border-top: 0;
+    }
+
+    &--hight {
+        z-index: 11;
+    }
+
+    &--secondary {
+        padding: 100px 0;
+        color: #fff;
+        background-color: @color-secondary;
+    }
+
+    &--gray {
+        background-color: @gray-light;
+    }
+
+    &--dark {
+        color: #fff;
+        background-color: @color-secondary;
+    }
+
+    &--offset-left {
+        .offset-left(.5);
+        .offset-left-md(0);
+    }
+
+    &--offset-right {
+        .offset-right(.5);
+        .offset-right-md(0);
+    }
+
+    &--short {
+        padding: 60px 0;
+    }
+
+    &--close {
+        padding: 0;
+
+        .md-block({
+            padding: 60px 0;
+        });
+
+        .sm-block({
+            padding: 60px 0;
+        });
+    }
+
+    &--small {
+        .offset(2);
+    }
+
+    &--margin {
+        margin-bottom: 150px;
+
+        .lg-block({
+            margin-bottom: 75px;
+        });
+
+        .md-block({
+            margin-bottom: 0;
+        });
+    }
+
+    &__container {
+        position: relative;
+        .wrapper();
+    }
+
+    &__link {
+        position: absolute;
+        right: 0;
+        margin-right: 60px;
+        border-color: black;
+
+        .md-block({
+            top: -30px;
+            left: 20px;
+            right: auto;
+            margin-right: auto;
+        });
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -10px;
+            margin-left: 10px;
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            background-image: url(../img/icons/arrow-right--colored.svg);
+        }
+    }
+
+    &__row {
+        .row-flex();
+    }
+
+    &__item {
+        .col();
+
+        &--8 {
+            .size(8);
+            .size-md(12);
+        }
+
+        &--4 {
+            .size(4);
+            .size-md(12);
+        }
+
+        &--3 {
+            .size(3);
+            .size-md(6);
+            .size-sm(12);
+        }
+    }
+
+    &__title {
+        .col();
+        .size(12);
+        align-self: flex-start;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 30px;
+        padding-right: 60px;
+        border-left: 3px solid @color-danger;
+        text-transform: uppercase;
+
+        .sm-block({
+            padding-right: 0;
+        });
+
+        &--smaller {
+            .size(6);
+            .offset(3);
+
+            .md-block({
+                .size(12);
+                .offset(0);
+            });
+        }
+
+        &--right {
+            .size(6);
+            .offset-left(6);
+
+            .lg-block({
+                .size(12);
+                .offset-left(0);
+            });
+        }
+
+        &--col {
+            .size(2);
+
+            .lg-block({
+                .size(12);
+            });
+        }
+    }
+
+    &__content {
+        .col();
+        .size(12);
+        margin-top: 100px;
+
+        .md-block({
+            margin-top: 75px;
+        });
+
+        .sm-block({
+            margin-top: 20px;
+        });
+
+        &--hight {
+            z-index: 11;
+        }
+
+        &--toright {
+            margin-left: auto;
+            margin-right: -220px;
+
+            .md-block({
+                margin-right: auto;
+            });
+        }
+
+        &--col {
+            .size(10);
+            margin-top: 0;
+
+            .lg-block({
+                .size(12);
+                margin-top: 75px;
+            });
+        }
+
+        &--small {
+            .offset-padding(1);
+
+            .lg-block({
+                .offset-padding(0);
+            });
+        }
+
+        &--smaller {
+            .offset-padding(3);
+
+            .md-block({
+                .offset-padding(0);
+            });
+        }
+
+        &--short {
+            margin-top: 40px;
+
+            .md-block({
+                margin-top: 20px;
+            });
+        }
+
+        &--shorter {
+            margin-top: 0;
+
+            .md-block({
+                margin-top: 0;
+            });
+        }
+    }
+
+    &__more {
+        position: relative;
+        padding: 40px 0;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #dadada;
+        z-index: 11;
+
+
+        a {
+            border-bottom: 1px dashed black;
+            transition: all .4s;
+
+            &:hover {
+                border-color: @color-accent;
+                transition: all .4s;
+            }
+        }
+    }
+
+    &__pagination {
+        margin-top: 40px;
+    }
+}

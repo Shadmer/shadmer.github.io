@@ -1,0 +1,37 @@
+.info {
+    position: relative;
+    z-index: 11;
+
+    .md-block({
+        padding: 10px 0;
+    });
+
+    &__row {
+        .row-flex();
+        align-items: center;
+        padding: 30px 0;
+        border-top: 1px solid #dadada;
+    }
+
+    &__desc {
+        .col();
+        .size(9);
+        .offset-right-padding(0.5);
+        .size-md(12);
+        .offset-right-padding-md(0);
+
+
+        a {
+            display: inline-block;
+            margin-bottom: 20px;
+            border-color: #000;
+        }
+    }
+
+    &__img {
+        .hover();
+        .col();
+        .size(3);
+        .size-md(12);
+    }
+}
