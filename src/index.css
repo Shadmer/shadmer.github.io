@@ -1,0 +1,16 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#root {
+    height: 100%;
+}
+html, body {
+	height: 100%;
+	background-color: #000;
+	color: white;
+}
+:root {
+	--transition: 1.75s cubic-bezier(.2, .6, 0, 1);
+}

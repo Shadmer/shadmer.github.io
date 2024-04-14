@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import Particles from "react-particles";
-import type { Container, Engine } from "tsparticles-engine";
+import type { Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 
 interface ISnowEffectProps {
@@ -10,22 +10,13 @@ interface ISnowEffectProps {
 
 export const SnowEffect = ({ id, color }: ISnowEffectProps) => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
     await loadSlim(engine);
   }, []);
-
-  // const particlesLoaded = useCallback(
-  //   async (container: Container | undefined) => {
-  //     await console.log(container);
-  //   },
-  //   []
-  // );
 
   return (
     <Particles
       id={id}
       init={particlesInit}
-      // loaded={particlesLoaded}
       options={{
         particles: {
           number: {
