@@ -7,6 +7,7 @@ import { SnowEffect } from "../components/SnowEffect";
 
 const StyledSwiper = styled(Swiper)`
   height: 100%;
+  background: #000;
 `;
 
 const StyledSwiperSlide = styled(SwiperSlide)`
