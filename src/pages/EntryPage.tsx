@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Parallax, Mousewheel } from "swiper/modules";
 import styled from "styled-components";
 import "swiper/css";
-import { SnowEffect } from "../components/SnowEffect";
+import { SnowEffect } from "@src/components/SnowEffect";
+import { Link } from "react-router-dom";
 
 const StyledSwiper = styled(Swiper)`
   height: 100%;
@@ -119,29 +120,32 @@ export const EntryPage = () => {
   }, []);
 
   return (
-    <StyledSwiper
-      // direction="vertical"
-      spaceBetween={18}
-      slidesPerView={1}
-      speed={2400}
-      parallax={true}
-      mousewheel={{
-        sensitivity: 2.4,
-      }}
-      modules={[Parallax, Mousewheel]}
-    >
-      {slides.map((slide, index) => (
-        <StyledSwiperSlide key={index}>
-          {slide.layers.map((layer, layerIndex) => (
-            <SliderLayer
-              key={layerIndex}
-              data-swiper-parallax={layer.parallax}
-              style={{ backgroundImage: `url(${layer.image})` }}
-            ></SliderLayer>
-          ))}
-          <SnowEffect id={index.toString()} color={slide.snowColor} />
-        </StyledSwiperSlide>
-      ))}
-    </StyledSwiper>
+    <>
+      <Link to="/inner">Inner Page</Link>
+      <StyledSwiper
+        // direction="vertical"
+        spaceBetween={18}
+        slidesPerView={1}
+        speed={2400}
+        parallax={true}
+        mousewheel={{
+          sensitivity: 2.4,
+        }}
+        modules={[Parallax, Mousewheel]}
+      >
+        {slides.map((slide, index) => (
+          <StyledSwiperSlide key={index}>
+            {slide.layers.map((layer, layerIndex) => (
+              <SliderLayer
+                key={layerIndex}
+                data-swiper-parallax={layer.parallax}
+                style={{ backgroundImage: `url(${layer.image})` }}
+              ></SliderLayer>
+            ))}
+            <SnowEffect id={index.toString()} color={slide.snowColor} />
+          </StyledSwiperSlide>
+        ))}
+      </StyledSwiper>
+    </>
   );
 };

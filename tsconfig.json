@@ -22,7 +22,11 @@
     "types": [
       "node",
       "webpack-env"
-    ]
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"]
+    }
   },
   "include": [
     "src"

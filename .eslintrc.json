@@ -20,7 +20,6 @@
     },
     "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
     "rules": {
-        "prettier/prettier": "error",
         "no-console": [1, { "allow": ["error"] }],
         "comma-dangle": [
             1,
