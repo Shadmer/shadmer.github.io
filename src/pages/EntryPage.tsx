@@ -4,7 +4,7 @@ import { Parallax, Mousewheel } from "swiper/modules";
 import styled from "styled-components";
 import "swiper/css";
 import { SnowEffect } from "@src/components/SnowEffect";
-import { Box, Link, Tooltip } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import { KeyboardDoubleArrowDown } from '@mui/icons-material';
 
 const StyledSwiper = styled(Swiper)({
@@ -35,10 +35,21 @@ const StyledLayer = styled('div')({
   },
 });
 
-const StyledLinkBox = styled(Box)({
+const StyledLink = styled(Link)({
   position: 'absolute',
-  bottom: 20,
   zIndex: 1,
+  bottom: 20,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  opacity: 0.3,
+  transition: 'opacity 1s, transform .6s',
+  transform: 'rotate(10deg)',
+
+  '&:hover': {
+    opacity: 1,
+    transform: 'scale(1.2) rotate(0deg)',
+  },
 });
 
 interface Layer {
@@ -86,7 +97,7 @@ export const EntryPage = () => {
           snowColor: "#BE9164",
           link: {
             href: 'https://shadmer.github.io/dnd-cheat-sheet',
-            text: 'Шпаргалка по ДнД',
+            text: '"Шпаргалка" по ДнД',
           },
         },
         {
@@ -165,21 +176,22 @@ export const EntryPage = () => {
             ))}
             <SnowEffect id={slide.name.toString()} color={slide.snowColor} />
             { slide.link &&
-              <StyledLinkBox>
-                <Tooltip
-                  title={slide.link.text}
-                  placement="top"
-                >
-                  <Link href={slide.link.href} sx={{ fontSize: 64 }}>
-                    <KeyboardDoubleArrowDown
-                      fontSize="inherit"
-                      sx={{
-                        color: slide.snowColor,
-                      }}
-                    />
-                  </Link>
-                </Tooltip>
-              </StyledLinkBox>
+              <StyledLink
+                href={slide.link.href}
+                underline="none"
+                sx={{
+                  fontSize: 64,
+                  color: slide.snowColor,
+                  }}
+              >
+                <Typography variant="h4">{slide.link.text}</Typography>
+                <KeyboardDoubleArrowDown
+                  fontSize="inherit"
+                  sx={{
+                    color: slide.snowColor,
+                  }}
+                />
+              </StyledLink>
             }
           </StyledSwiperSlide>
         ))}
