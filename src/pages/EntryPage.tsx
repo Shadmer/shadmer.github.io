@@ -13,6 +13,8 @@ const StyledSwiper = styled(Swiper)({
 });
 
 const StyledSwiperSlide = styled(SwiperSlide)({
+  display: 'flex',
+  justifyContent: 'center',
   overflow: 'hidden',
 });
 
@@ -36,10 +38,7 @@ const StyledLayer = styled('div')({
 const StyledLinkBox = styled(Box)({
   position: 'absolute',
   bottom: 20,
-  width: '100%',
-  textAlign: 'center',
-  zIndex: 2,
-  cursor: 'pointer',
+  zIndex: 1,
 });
 
 interface Layer {
@@ -174,7 +173,9 @@ export const EntryPage = () => {
                   <Link href={slide.link.href} sx={{ fontSize: 64 }}>
                     <KeyboardDoubleArrowDown
                       fontSize="inherit"
-                      sx={{ color: slide.snowColor }}
+                      sx={{
+                        color: slide.snowColor,
+                      }}
                     />
                   </Link>
                 </Tooltip>
