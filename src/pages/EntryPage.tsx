@@ -4,33 +4,43 @@ import { Parallax, Mousewheel } from "swiper/modules";
 import styled from "styled-components";
 import "swiper/css";
 import { SnowEffect } from "@src/components/SnowEffect";
-import { Link } from "react-router-dom";
+import { Box, Link, Tooltip } from "@mui/material";
+import { KeyboardDoubleArrowDown } from '@mui/icons-material';
 
-const StyledSwiper = styled(Swiper)`
-  height: 100%;
-  background: #000;
-`;
+const StyledSwiper = styled(Swiper)({
+  height: '100%',
+  background: '#000',
+});
 
-const StyledSwiperSlide = styled(SwiperSlide)`
-  overflow: hidden;
-`;
+const StyledSwiperSlide = styled(SwiperSlide)({
+  overflow: 'hidden',
+});
 
-const SliderLayer = styled.div`
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  will-change: transform;
-  transition: var(--transition) !important;
+const StyledLayer = styled('div')({
+  position: 'absolute',
+  inset: 0,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  willChange: 'transform',
+  transition: 'var(--transition) !important',
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    box-shadow: inset 0 0 250px rgb(0 0 0 / 0.3);
-  }
-`;
+  '&::before': {
+    content: '""',
+    position: 'absolute',
+    inset: 0,
+    zIndex: 1,
+    boxShadow: 'inset 0 0 250px rgb(0 0 0 / 0.3)',
+  },
+});
+
+const StyledLinkBox = styled(Box)({
+  position: 'absolute',
+  bottom: 20,
+  width: '100%',
+  textAlign: 'center',
+  zIndex: 2,
+  cursor: 'pointer',
+});
 
 interface Layer {
   parallax: string;
@@ -38,8 +48,13 @@ interface Layer {
 }
 
 interface Slide {
+  name: string;
   layers: Layer[];
   snowColor: string;
+  link?: {
+    href: string;
+    text: string;
+  };
 }
 
 export const EntryPage = () => {
@@ -54,6 +69,7 @@ export const EntryPage = () => {
     const loadSlides = async () => {
       const slidesData: Slide[] = [
         {
+          name: '1',
           layers: [
             {
               parallax: "35%",
@@ -69,8 +85,13 @@ export const EntryPage = () => {
             },
           ],
           snowColor: "#BE9164",
+          link: {
+            href: 'https://shadmer.github.io/dnd-cheat-sheet',
+            text: 'Шпаргалка по ДнД',
+          },
         },
         {
+          name: '2',
           layers: [
             {
               parallax: "40%",
@@ -89,9 +110,10 @@ export const EntryPage = () => {
               image: await loadImage("screen-2/layer-front.png"),
             },
           ],
-          snowColor: "#525A6D",
+          snowColor: "#3D4232",
         },
         {
+          name: '3',
           layers: [
             {
               parallax: "48%",
@@ -121,9 +143,9 @@ export const EntryPage = () => {
 
   return (
     <>
-      <Link to="/inner">Inner Page</Link>
       <StyledSwiper
         // direction="vertical"
+        loop={true}
         spaceBetween={18}
         slidesPerView={1}
         speed={2400}
@@ -133,16 +155,31 @@ export const EntryPage = () => {
         }}
         modules={[Parallax, Mousewheel]}
       >
-        {slides.map((slide, index) => (
-          <StyledSwiperSlide key={index}>
+        {slides.map((slide) => (
+          <StyledSwiperSlide key={slide.name}>
             {slide.layers.map((layer, layerIndex) => (
-              <SliderLayer
+              <StyledLayer
                 key={layerIndex}
                 data-swiper-parallax={layer.parallax}
                 style={{ backgroundImage: `url(${layer.image})` }}
-              ></SliderLayer>
+              ></StyledLayer>
             ))}
-            <SnowEffect id={index.toString()} color={slide.snowColor} />
+            <SnowEffect id={slide.name.toString()} color={slide.snowColor} />
+            { slide.link &&
+              <StyledLinkBox>
+                <Tooltip
+                  title={slide.link.text}
+                  placement="top"
+                >
+                  <Link href={slide.link.href} sx={{ fontSize: 64 }}>
+                    <KeyboardDoubleArrowDown
+                      fontSize="inherit"
+                      sx={{ color: slide.snowColor }}
+                    />
+                  </Link>
+                </Tooltip>
+              </StyledLinkBox>
+            }
           </StyledSwiperSlide>
         ))}
       </StyledSwiper>
