@@ -4,7 +4,6 @@ import { SnowEffect } from "@src/components/SnowEffect";
 import { Box, Link, Typography } from "@mui/material";
 import { KeyboardDoubleArrowDown } from '@mui/icons-material';
 import { Slide } from "@src/components/types";
-import { Loading } from "@src/components/Loading";
 
 const StyledLayer = styled('img')<{ opacity: number }>(({ opacity }) => ({
     position: 'absolute',
@@ -25,7 +24,7 @@ const StyledLayer = styled('img')<{ opacity: number }>(({ opacity }) => ({
     },
 }));
 
-const StyledLink = styled(Link)<{ opacity: number }>(({ opacity }) => ({
+const StyledLink = styled(Link)({
     position: 'absolute',
     zIndex: 1,
     bottom: 20,
@@ -33,7 +32,7 @@ const StyledLink = styled(Link)<{ opacity: number }>(({ opacity }) => ({
     flexDirection: 'column',
     alignItems: 'center',
     padding: '10px',
-    opacity,
+    opacity: 0.3,
     transition: 'opacity 1s, transform .6s',
     transform: 'scale(.8) rotate(10deg)',
 
@@ -41,57 +40,56 @@ const StyledLink = styled(Link)<{ opacity: number }>(({ opacity }) => ({
         opacity: 1,
         transform: 'scale(1) rotate(0deg)',
     },
-}));
+});
 
 interface SlideContentProps {
     slide: Slide
 }
 
-export const SlideContent: React.FC<{ slide: Slide }> = ({ slide }: SlideContentProps) => {
-    const [loadedImagesCount, setLoadedImagesCount] = React.useState(0);
-    const totalImagesCount = slide.layers.length;
-    const imagesLoaded = React.useMemo(() => loadedImagesCount === totalImagesCount, [loadedImagesCount, totalImagesCount])
+export const SlideContent: React.FC<SlideContentProps> = ({ slide }) => {
+    const [loadedImages, setLoadedImages] = React.useState<boolean[]>(new Array(slide.layers.length).fill(false));
 
-    const handleImageLoad = () => {
-        setLoadedImagesCount((prevCount) => prevCount + 1);
+    const handleImageLoad = (index: number) => {
+        setLoadedImages(prevLoadedImages => {
+            const newLoadedImages = [...prevLoadedImages];
+            newLoadedImages[index] = true;
+            return newLoadedImages;
+        });
     };
 
     return (
-        <>
-            {!imagesLoaded && (<Loading />)}
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                {slide.layers.map((layer, layerIndex) => (
-                    <StyledLayer
-                        key={layerIndex}
-                        data-swiper-parallax={layer.parallax}
-                        src={layer.image}
-                        alt={`Layer ${layerIndex}`}
-                        loading="lazy"
-                        onLoad={handleImageLoad}
-                        opacity={+imagesLoaded}
-                    ></StyledLayer>
-                ))}
-                <SnowEffect id={slide.name.toString()} color={slide.snowColor} />
-                {slide.link && (
-                    <StyledLink
-                        href={slide.link.href}
-                        underline="none"
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            {slide.layers.map((layer, index) => (
+                <StyledLayer
+                    key={index}
+                    data-swiper-parallax={layer.parallax}
+                    src={layer.image}
+                    alt={`Layer ${index}`}
+                    loading="lazy"
+                    onLoad={() => handleImageLoad(index)}
+                    opacity={loadedImages[index] ? 1 : 0}
+                />
+            ))}
+            <SnowEffect id={slide.name.toString()} color={slide.snowColor} />
+            {slide.link && (
+                <StyledLink
+                    href={slide.link.href}
+                    underline="none"
+                    sx={{
+                        fontSize: 64,
+                        color: slide.snowColor,
+                    }}
+                    style={{ opacity: loadedImages.every(imageLoaded => imageLoaded) ? 0.3 : 0 }}
+                >
+                    <Typography variant="h4">{slide.link.text}</Typography>
+                    <KeyboardDoubleArrowDown
+                        fontSize="inherit"
                         sx={{
-                            fontSize: 64,
                             color: slide.snowColor,
                         }}
-                        opacity={imagesLoaded ? 0.3 : 0}
-                    >
-                        <Typography variant="h4">{slide.link.text}</Typography>
-                        <KeyboardDoubleArrowDown
-                            fontSize="inherit"
-                            sx={{
-                                color: slide.snowColor,
-                            }}
-                        />
-                    </StyledLink>
-                )}
-            </Box>
-        </>
-    )
-}
+                    />
+                </StyledLink>
+            )}
+        </Box>
+    );
+};
