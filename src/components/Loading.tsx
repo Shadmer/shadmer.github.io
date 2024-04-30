@@ -5,7 +5,7 @@ export const Loading = () => {
     return (
         <Backdrop
             open={true}
-            sx={{ color: '#fff' }}
+            sx={{ color: '#fff', zIndex: 1000 }}
         >
             <CircularProgress color="inherit" />
         </Backdrop>
