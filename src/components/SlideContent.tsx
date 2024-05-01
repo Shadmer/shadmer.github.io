@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { SnowEffect } from "@src/components/SnowEffect";
-import { Box, Link, Typography } from "@mui/material";
+import React from 'react';
+import styled from 'styled-components';
+import { SnowEffect } from '@src/components/SnowEffect';
+import { Box, Link, Typography } from '@mui/material';
 import { KeyboardDoubleArrowDown } from '@mui/icons-material';
-import { Slide } from "@src/components/types";
+import { Slide } from '@src/components/types';
 
 const StyledLayer = styled('img')<{ opacity: number }>(({ opacity }) => ({
     position: 'absolute',
@@ -43,14 +43,16 @@ const StyledLink = styled(Link)({
 });
 
 interface SlideContentProps {
-    slide: Slide
+    slide: Slide;
 }
 
 export const SlideContent: React.FC<SlideContentProps> = ({ slide }) => {
-    const [loadedImages, setLoadedImages] = React.useState<boolean[]>(new Array(slide.layers.length).fill(false));
+    const [loadedImages, setLoadedImages] = React.useState<boolean[]>(
+        new Array(slide.layers.length).fill(false)
+    );
 
     const handleImageLoad = (index: number) => {
-        setLoadedImages(prevLoadedImages => {
+        setLoadedImages((prevLoadedImages) => {
             const newLoadedImages = [...prevLoadedImages];
             newLoadedImages[index] = true;
             return newLoadedImages;
@@ -79,7 +81,13 @@ export const SlideContent: React.FC<SlideContentProps> = ({ slide }) => {
                         fontSize: 64,
                         color: slide.snowColor,
                     }}
-                    style={{ opacity: loadedImages.every(imageLoaded => imageLoaded) ? 0.3 : 0 }}
+                    style={{
+                        opacity: loadedImages.every(
+                            (imageLoaded) => imageLoaded
+                        )
+                            ? 0.3
+                            : 0,
+                    }}
                 >
                     <Typography variant="h4">{slide.link.text}</Typography>
                     <KeyboardDoubleArrowDown

@@ -47,7 +47,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:ts": "npx eslint \"**/*.{ts,tsx}\" --max-warnings=10 --color",
+    "lint:ts:fix": "npx eslint \"**/*.{ts,tsx}\" --fix"
   },
   "eslintConfig": {
     "extends": [
