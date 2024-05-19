@@ -23,7 +23,7 @@ export const EntryPage = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     const loadImage = async (url: string): Promise<string> => {
-        const image = await import(`../assets/entry/${url}`);
+        const image = await import(`../assets/img/${url}`);
         return image.default;
     };
 
@@ -100,6 +100,8 @@ export const EntryPage = () => {
                 <Loading />
             ) : (
                 <StyledSwiper
+                    navigation={true}
+                    grabCursor={true}
                     loop={true}
                     spaceBetween={18}
                     slidesPerView={1}

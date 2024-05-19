@@ -35,6 +35,8 @@ const StyledLink = styled(Link)({
     opacity: 0.3,
     transition: 'opacity 1s, transform .6s',
     transform: 'scale(.8) rotate(10deg)',
+    backdropFilter: 'blur(25px) brightness(.98)',
+    color: '#fff',
 
     '&:hover': {
         opacity: 1,
@@ -79,23 +81,10 @@ export const SlideContent: React.FC<SlideContentProps> = ({ slide }) => {
                     underline="none"
                     sx={{
                         fontSize: 64,
-                        color: slide.snowColor,
-                    }}
-                    style={{
-                        opacity: loadedImages.every(
-                            (imageLoaded) => imageLoaded
-                        )
-                            ? 0.3
-                            : 0,
                     }}
                 >
                     <Typography variant="h4">{slide.link.text}</Typography>
-                    <KeyboardDoubleArrowDown
-                        fontSize="inherit"
-                        sx={{
-                            color: slide.snowColor,
-                        }}
-                    />
+                    <KeyboardDoubleArrowDown fontSize="inherit" />
                 </StyledLink>
             )}
         </Box>
